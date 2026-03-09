@@ -1,0 +1,47 @@
+.shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+.hero {
+  width: min(100%, 720px);
+  padding: 3rem;
+  border: 1px solid #d7dde6;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #4b5563;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  line-height: 0.95;
+  color: #111827;
+}
+
+.description {
+  max-width: 38rem;
+  margin: 1.5rem 0 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 2rem;
+    border-radius: 20px;
+  }
+}
