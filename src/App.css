@@ -114,7 +114,7 @@
 }
 
 .hero-copy {
-  max-width: 40rem;
+  max-width: 42rem;
 }
 
 .hero-kicker,
@@ -146,7 +146,7 @@
 }
 
 .hero h1 {
-  font-size: clamp(3.8rem, 9vw, 7.1rem);
+  font-size: clamp(3.4rem, 8vw, 6.6rem);
 }
 
 .hero-summary,
@@ -155,28 +155,40 @@
 .skill-card-header p,
 .project-card p,
 .contact-copy p,
-.hero-note p {
+.hero-note p,
+.project-points li,
+.contact-list span {
   color: var(--muted);
   font-size: 1.02rem;
   line-height: 1.8;
 }
 
 .hero-summary {
-  max-width: 33rem;
+  max-width: 36rem;
   margin: 1.5rem 0 0;
 }
 
 .hero-actions,
-.contact-actions {
+.contact-actions,
+.project-links {
   display: flex;
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+.hero-actions,
+.contact-actions {
   margin-top: 2rem;
 }
 
+.project-links {
+  margin-top: auto;
+}
+
 .primary-link,
-.secondary-link {
+.secondary-link,
+.project-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -191,7 +203,8 @@
   box-shadow: 0 18px 30px rgba(17, 17, 17, 0.12);
 }
 
-.secondary-link {
+.secondary-link,
+.project-link {
   border: 1px solid var(--line-strong);
   background: rgba(255, 255, 255, 0.72);
 }
@@ -221,7 +234,7 @@
 .section-heading {
   display: grid;
   gap: 1rem;
-  max-width: 42rem;
+  max-width: 48rem;
 }
 
 .section-heading h2,
@@ -249,7 +262,8 @@
 
 .about-grid p,
 .skill-card,
-.project-card {
+.project-card,
+.contact-panel {
   margin: 0;
   padding: 1.7rem;
   border: 1px solid rgba(162, 169, 177, 0.28);
@@ -303,19 +317,32 @@
   letter-spacing: -0.04em;
 }
 
-.project-link {
-  margin-top: auto;
-  color: #3f444a;
-  font-weight: 600;
+.project-points {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.project-points li + li {
+  margin-top: 0.55rem;
 }
 
 .contact-section {
   min-height: 70vh;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
   align-items: end;
   gap: 2rem;
   padding-bottom: 6rem;
+}
+
+.contact-panel {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.contact-list {
+  display: grid;
+  gap: 0.35rem;
 }
 
 .footer-note {
@@ -485,13 +512,14 @@
   }
 
   .hero h1 {
-    font-size: clamp(2.9rem, 13vw, 4.6rem);
+    font-size: clamp(2.8rem, 12vw, 4.8rem);
   }
 
   .hero-note,
   .about-grid p,
   .skill-card,
   .project-card,
+  .contact-panel,
   .avatar-canvas-wrap {
     border-radius: 22px;
   }

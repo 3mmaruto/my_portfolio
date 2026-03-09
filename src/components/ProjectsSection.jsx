@@ -18,7 +18,24 @@ function ProjectsSection({ typedDescription, showCursor }) {
             <span className="metal-pill">{project.tag}</span>
             <h3>{project.title}</h3>
             <p>{project.summary}</p>
-            <span className="project-link">Project details later</span>
+            <ul className="project-points">
+              {project.details.map((detail) => (
+                <li key={detail}>{detail}</li>
+              ))}
+            </ul>
+            <div className="project-links">
+              {project.links.map((link) => (
+                <a
+                  key={link.href}
+                  className="project-link"
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
           </article>
         ))}
       </div>

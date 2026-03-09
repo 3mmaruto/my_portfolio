@@ -14,11 +14,20 @@ function ContactSection({ typedDescription, showCursor }) {
         />
       </div>
 
-      <div className="contact-actions">
-        <a className="primary-link" href={`mailto:${siteContent.contact.email}`}>
-          {siteContent.contact.email}
-        </a>
-        <span className="footer-note">{siteContent.contact.note}</span>
+      <div className="contact-panel">
+        <div className="contact-actions">
+          <a className="primary-link" href={`mailto:${siteContent.contact.email}`}>
+            {siteContent.contact.email}
+          </a>
+          <a className="secondary-link" href={siteContent.contact.github} target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+        </div>
+
+        <div className="contact-list">
+          <span>Phone: {siteContent.contact.phone}</span>
+          <span>{siteContent.contact.note}</span>
+        </div>
       </div>
     </section>
   )

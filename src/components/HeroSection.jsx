@@ -18,16 +18,16 @@ function HeroSection({ typedContent, showCursor }) {
         />
         <div className="hero-actions">
           <a className="primary-link" href="#projects">
-            Explore projects
+            View projects
           </a>
-          <a className="secondary-link" href="#contact">
-            Get in touch
+          <a className="secondary-link" href={siteContent.contact.github} target="_blank" rel="noreferrer">
+            GitHub profile
           </a>
         </div>
       </div>
 
       <div className="hero-note">
-        <span className="note-chip">Currently building</span>
+        <span className="note-chip">Current direction</span>
         <TypedText
           text={typedContent.note}
           className="hero-note-copy"
