@@ -2,23 +2,61 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: #111827;
-  background:
-    radial-gradient(circle at top, #f8fafc 0%, #eef2ff 35%, #e2e8f0 100%);
+  color: #111111;
+  background: #f5f4f1;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  --bg: #f5f4f1;
+  --surface: rgba(255, 255, 255, 0.74);
+  --surface-strong: rgba(255, 255, 255, 0.9);
+  --text: #121212;
+  --muted: #50545c;
+  --line: rgba(123, 130, 141, 0.34);
+  --line-strong: rgba(123, 130, 141, 0.55);
+  --metal: linear-gradient(135deg, #fafbfc 0%, #dfe4ea 30%, #aeb7c0 58%, #f8fafb 100%);
+  --shadow: 0 24px 60px rgba(20, 26, 33, 0.08);
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.92), transparent 38%),
+    linear-gradient(180deg, #faf9f6 0%, #f5f4f1 45%, #f1efeb 100%);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(110deg, rgba(255, 255, 255, 0.75), transparent 24%),
+    radial-gradient(circle at 80% 20%, rgba(220, 226, 231, 0.35), transparent 20%);
+  opacity: 0.9;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  background: none;
 }
 
 #root {
