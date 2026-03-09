@@ -1,13 +1,15 @@
-import { projectCards } from '../content'
+import { projectCards, siteContent } from '../content'
 import SectionHeading from './SectionHeading'
 
-function ProjectsSection() {
+function ProjectsSection({ typedDescription, showCursor }) {
   return (
     <section id="projects" className="section" data-section>
       <SectionHeading
-        eyebrow="Projects"
-        title="Reserved space for future case studies and polished project stories"
-        description="These cards are placeholders for upcoming work and can be replaced with real projects, links, and results later."
+        eyebrow={siteContent.projects.eyebrow}
+        title={siteContent.projects.title}
+        description={siteContent.projects.description}
+        typedDescription={typedDescription}
+        showCursor={showCursor && typedDescription.length > 0}
       />
 
       <div className="project-grid">

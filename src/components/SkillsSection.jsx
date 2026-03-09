@@ -1,13 +1,15 @@
-import { skillGroups } from '../content'
+import { siteContent, skillGroups } from '../content'
 import SectionHeading from './SectionHeading'
 
-function SkillsSection() {
+function SkillsSection({ typedDescription, showCursor }) {
   return (
     <section id="skills" className="section" data-section>
       <SectionHeading
-        eyebrow="Skills"
-        title="A balanced toolkit across product, interface, and intelligence"
-        description="The layout is intentionally polished and editable, so we can refine the stack later without changing the visual system."
+        eyebrow={siteContent.skills.eyebrow}
+        title={siteContent.skills.title}
+        description={siteContent.skills.description}
+        typedDescription={typedDescription}
+        showCursor={showCursor && typedDescription.length > 0}
       />
 
       <div className="skill-grid">

@@ -1,20 +1,24 @@
-function ContactSection() {
+import { siteContent } from '../content'
+import TypedText from './TypedText'
+
+function ContactSection({ typedDescription, showCursor }) {
   return (
     <section id="contact" className="section contact-section" data-section>
       <div className="contact-copy">
-        <p className="section-eyebrow">Contact</p>
-        <h2>Let&apos;s build something focused and useful.</h2>
-        <p>
-          This footer-contact area is intentionally minimal for now and ready to be
-          replaced with your real email, socials, and final call to action.
-        </p>
+        <p className="section-eyebrow">{siteContent.contact.eyebrow}</p>
+        <h2>{siteContent.contact.title}</h2>
+        <TypedText
+          text={typedDescription}
+          className="contact-copy-paragraph"
+          cursor={showCursor && typedDescription.length > 0}
+        />
       </div>
 
       <div className="contact-actions">
-        <a className="primary-link" href="mailto:ammar@example.com">
-          ammar@example.com
+        <a className="primary-link" href={`mailto:${siteContent.contact.email}`}>
+          {siteContent.contact.email}
         </a>
-        <span className="footer-note">Editable placeholder contact details</span>
+        <span className="footer-note">{siteContent.contact.note}</span>
       </div>
     </section>
   )

@@ -1,9 +1,11 @@
-function SectionHeading({ eyebrow, title, description }) {
+import TypedText from './TypedText'
+
+function SectionHeading({ eyebrow, title, description, typedDescription = description, showCursor = false }) {
   return (
     <div className="section-heading">
       <p className="section-eyebrow">{eyebrow}</p>
       <h2>{title}</h2>
-      <p>{description}</p>
+      <TypedText text={typedDescription} className="section-heading-copy" cursor={showCursor} />
     </div>
   )
 }
