@@ -1,15 +1,13 @@
 import { projectCards, siteContent } from '../content'
 import SectionHeading from './SectionHeading'
 
-function ProjectsSection({ typedDescription, showCursor }) {
+function ProjectsSection() {
   return (
     <section id="projects" className="section" data-section>
       <SectionHeading
         eyebrow={siteContent.projects.eyebrow}
         title={siteContent.projects.title}
         description={siteContent.projects.description}
-        typedDescription={typedDescription}
-        showCursor={showCursor && typedDescription.length > 0}
       />
 
       <div className="project-grid">

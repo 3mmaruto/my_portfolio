@@ -1,17 +1,12 @@
 import { siteContent } from '../content'
-import TypedText from './TypedText'
 
-function ContactSection({ typedDescription, showCursor }) {
+function ContactSection() {
   return (
     <section id="contact" className="section contact-section" data-section>
       <div className="contact-copy">
         <p className="section-eyebrow">{siteContent.contact.eyebrow}</p>
         <h2>{siteContent.contact.title}</h2>
-        <TypedText
-          text={typedDescription}
-          className="contact-copy-paragraph"
-          cursor={showCursor && typedDescription.length > 0}
-        />
+        <p className="contact-copy-paragraph">{siteContent.contact.description}</p>
       </div>
 
       <div className="contact-panel">

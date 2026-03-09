@@ -114,14 +114,3 @@ export const projectCards = [
     ],
   },
 ]
-
-export const typingSequence = [
-  { key: 'hero.summary', sectionId: 'hero', text: siteContent.hero.summary },
-  { key: 'hero.note', sectionId: 'hero', text: siteContent.hero.note },
-  { key: 'about.description', sectionId: 'about', text: siteContent.about.description },
-  { key: 'about.paragraphs.0', sectionId: 'about', text: siteContent.about.paragraphs[0] },
-  { key: 'about.paragraphs.1', sectionId: 'about', text: siteContent.about.paragraphs[1] },
-  { key: 'skills.description', sectionId: 'skills', text: siteContent.skills.description },
-  { key: 'projects.description', sectionId: 'projects', text: siteContent.projects.description },
-  { key: 'contact.description', sectionId: 'contact', text: siteContent.contact.description },
-]

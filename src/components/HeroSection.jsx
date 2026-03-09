@@ -1,7 +1,6 @@
 import { siteContent } from '../content'
-import TypedText from './TypedText'
 
-function HeroSection({ typedContent, showCursor }) {
+function HeroSection() {
   return (
     <section id="hero" className="hero section" data-section>
       <div className="hero-copy">
@@ -11,28 +10,20 @@ function HeroSection({ typedContent, showCursor }) {
           <br />
           {siteContent.hero.titleLines[1]}
         </h1>
-        <TypedText
-          text={typedContent.summary}
-          className="hero-summary"
-          cursor={showCursor && typedContent.summary.length > 0}
-        />
+        <p className="hero-summary">{siteContent.hero.summary}</p>
         <div className="hero-actions">
           <a className="primary-link" href="#projects">
-            View projects
+            Explore projects
           </a>
-          <a className="secondary-link" href={siteContent.contact.github} target="_blank" rel="noreferrer">
-            GitHub profile
+          <a className="secondary-link" href="#contact">
+            Get in touch
           </a>
         </div>
       </div>
 
       <div className="hero-note">
-        <span className="note-chip">Current direction</span>
-        <TypedText
-          text={typedContent.note}
-          className="hero-note-copy"
-          cursor={showCursor && typedContent.note.length > 0}
-        />
+        <span className="note-chip">Currently building</span>
+        <p className="hero-note-copy">{siteContent.hero.note}</p>
       </div>
     </section>
   )
